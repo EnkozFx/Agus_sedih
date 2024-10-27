@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <header class="flex justify-between p-5 items-center">
+        <h1 class="text-3xl font-bold">AGUS SEDIH</h1>
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-gray-400">Home</a>
+            <a href="#" class="hover:text-gray-400">Services</a>
+            <a href="#" class="hover:text-gray-400">Contact</a>
+            <button class="bg-red-500 text-white px-4 py-2 rounded">Masuk</button>
+        </nav>
+    </header>
+
+    <!-- Dropdown Menu for Mobile -->
+    <div id="dropdown-menu" class="hidden absolute top-16 left-0 w-full bg-gray-800 md:hidden">
+        <nav class="flex flex-col items-center space-y-4 py-4">
+            <a href="#" class="hover:text-gray-400">Home</a>
+            <a href="#" class="hover:text-gray-400">Services</a>
+            <a href="#" class="hover:text-gray-400">Contact</a>
+            <button class="bg-red-500 text-white px-4 py-2 rounded">Masuk</button>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row justify-between items-center p-10 md:p-20">
+        <div class="mb-8 md:mb-0 md:w-1/2">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Outfit Kece Murah , Cuman ada di Toko Agus</h2>
+            <p class="mb-4 text-gray-400">Outfit ga harus mahal buat bisa dapet yang berkualitas.Harga boleh murah , tapi kualitas ga murahan</p>
+            <button class="bg-red-500 text-white px-2 py-2 rounded-lg">Gaskeun checkout </button>
+        </div>
+        <!-- Updated Image Section -->
+        <img src="image/1.jpg" alt="fashion model" class="w-full h-auto md:w-1/2 max-w-xs md:max-w-full rounded-lg">
+    </section>
+
+    <!-- Product Slider -->
+    <section class="p-10 md:p-20">
+        <h3 class="text-2xl md:text-3xl font-bold mb-6">Baju Pilihan Agus</h3>
+        <div class="relative overflow-hidden">
+            <div class="flex md:space-x-8 space-x-4 transition-transform duration-500" id="slider">
+                <!-- Product Card 1 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg w-60 md:w-80 flex-shrink-0">
+                    <img src="image/1.jpg" alt="Winter shirt" class="w-full h-56 md:h-56 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl md:text-2xl font-bold">Kameja agus</h4>
+                    <p class="text-gray-560">Agus cloth</p>
+                    <p class="text-red-500 mt-2">Rp.320.000</p>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg w-60 md:w-80 flex-shrink-0">
+                    <img src="image/2.jpg" alt="Winter Fashion" class="w-full h-56 md:h-56 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl md:text-2xl font-bold">Jaket agus</h4>
+                    <p class="text-gray-560">Agus cloth</p>
+                    <p class="text-red-500 mt-2">Rp.600.000</p>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg w-60 md:w-80 flex-shrink-0">
+                    <img src="image/3.jpg" alt="Summer Fashion" class="w-full h-56 md:h-56 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl md:text-2xl font-bold">Kameja agus</h4>
+                    <p class="text-gray-560">Agus cloth</p>
+                    <p class="text-red-500 mt-2">Rp.250.000</p>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg w-60 md:w-80 flex-shrink-0">
+                    <img src="image/cyan.jpg" alt="Autumn Fashion" class="w-full h-56 md:h-56 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl md:text-2xl font-bold">Baju bekas agus ngamen</h4>
+                    <p class="text-gray-560">Agus cloth</p>
+                    <p class="text-red-500 mt-2">Rp.560.000</p>
+                </div>
+                 <!-- Product Card 4 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg w-60 md:w-80 flex-shrink-0">
+                    <img src="image/red.jpg" alt="Autumn Fashion" class="w-full h-56 md:h-56 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl md:text-2xl font-bold">Baju istri agus</h4>
+                    <p class="text-gray-560">Agus cloth</p>
+                    <p class="text-red-500 mt-2">Rp.500.000</p>
+                </div>
+                 <!-- Product Card 4 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg w-60 md:w-80 flex-shrink-0">
+                    <img src="image/avocado.jpg" alt="Autumn Fashion" class="w-full h-56 md:h-56 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl md:text-2xl font-bold">Baju tetangga agus</h4>
+                    <p class="text-gray-560">Agus cloth</p>
+                    <p class="text-red-500 mt-2">Rp.400.000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="flex justify-between mt-4">
+            <button class="bg-gray-700 p-2 rounded-lg font-extrabold" id="prev"><<<</button>
+            <button class="bg-gray-700 p-2 rounded-lg font-extrabold" id="next">>>></button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-10">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="mb-4 md:mb-0">
+                <h4 class="text-xl font-bold">AGUS CLOTH</h4>
+                <p class="text-gray-400 mt-2">Make your fashion charming with our latest collection.</p>
+            </div>
+            <div class="space-y-2">
+                <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Dropdown Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        // Product Slider
+        const slider = document.getElementById('slider');
+        let cardWidth = slider.children[0].offsetWidth + 16; // Lebar card dengan margin
+        const maxScroll = (slider.children.length * cardWidth) - slider.offsetWidth;
+        let scrollAmount = 0;
+
+        document.getElementById('next').onclick = function() {
+            if (scrollAmount < maxScroll) {
+                scrollAmount += cardWidth;
+                slider.style.transform = `translateX(-${scrollAmount}px)`;
+            }
+        }
+
+        document.getElementById('prev').onclick = function() {
+            if (scrollAmount > 0) {
+                scrollAmount -= cardWidth;
+                slider.style.transform = `translateX(-${scrollAmount}px)`;
+            }
+        }
+
+        // Update card width on window resize for better responsiveness
+        window.onresize = function() {
+            cardWidth = slider.children[0].offsetWidth + 16;
+        }
+    </script>
+</body>
+</html>
