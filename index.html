@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashi Dynamic Images</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Hover effects with smooth transitions */
+        .hover-zoom:hover {
+            transform: scale(1.03); /* Slight zoom effect */
+            transition: transform 0.4s ease-in-out; /* Smooth transition */
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Light shadow */
+            transition: box-shadow 0.4s ease-in-out; /* Smooth shadow */
+        }
+        /* Smooth scrolling for the entire page */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Navbar -->
+    <header class="bg-gray-800 shadow-md z-50 relative">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-white">Agus Cloth.</div>
+
+            <!-- Hamburger (visible on mobile) -->
+            <div class="flex items-center space-x-4 lg:hidden">
+                <button id="menu-btn" class="lg:hidden block text-gray-300 focus:outline-none">
+                    <!-- Hamburger Icon -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Responsive Navbar Links -->
+            <nav class="hidden lg:flex space-x-6 items-center">
+                <a href="#" class="hover:bg-gray-700 px-4 py-2 rounded text-white">Home</a>
+                <!-- Dropdown Kategori (All Categories) -->
+                <select class="border-gray-700 text-gray-300 py-2 px-4 bg-gray-900 rounded">
+                    <option>All Categories</option>
+                    <option>Baju</option>
+                    <option>Celana</option>
+                    <option>Aksesoris</option>
+                </select>
+                <a href="#" class="hover:bg-gray-700 px-4 py-2 rounded text-white">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Dropdown Menu (Sliding from right) -->
+    <div id="mobile-menu" class="fixed inset-0 transform translate-x-full transition-transform duration-300 bg-gray-900 bg-opacity-80 z-40 lg:hidden">
+        <div class="w-3/4 h-full bg-gray-800 shadow-lg p-8">
+            <nav class="flex flex-col space-y-4">
+                <a href="#" class="hover:bg-gray-700 px-4 py-2 rounded text-white">Home</a>
+                <!-- Dropdown Kategori (Mobile) -->
+                <select class="border-gray-700 text-gray-300 py-2 px-4 bg-gray-900 rounded">
+                    <option>All Categories</option>
+                    <option>baju</option>
+                    <option>Celana</option>
+                    <option>Aksesoris</option>
+                </select>
+                <a href="#" class="hover:bg-gray-700 px-4 py-2 rounded text-white">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section (Slider) -->
+    <section class="relative bg-gray-900 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex flex-col justify-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">Agus Sedih Banget</h1>
+                <p class="mt-4 text-lg text-gray-300">Harga murah bukan berarti murahan, Murah harganya , beda sama kualitas nya</p>
+                <a href="#" class="mt-6 inline-block bg-red-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-600 transition duration-300">Agus Sedih</a>
+            </div>
+            <div class="relative hover-zoom hover-shadow">
+                <img src="image/cyan.jpg" alt="Black Friday Sale" class="w-full h-full object-cover rounded-t-lg">
+                <!-- Sale Badge -->
+                <div class="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 text-lg rounded-full">
+                    Diskon 50%
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section (Grid) -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <!-- Men's Category -->
+            <div class="relative group hover-zoom hover-shadow">
+                <img src="image/1.jpg" alt="Men's" class="w-full h-full object-cover rounded-lg">
+                <!-- Gradient overlay for better text readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                <!-- Label permanen di bagian bawah -->
+                <div class="absolute bottom-0 left-0 right-0 bg-red-500 text-white px-4 py-2 text-lg rounded-t-lg">
+                    Baju
+                </div>
+            </div>
+            <!-- Women's Category -->
+            <div class="relative group hover-zoom hover-shadow">
+                <img src="image/2.jpg" alt="Women's" class="w-full h-full object-cover rounded-lg">
+                <!-- Gradient overlay for better text readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                <!-- Label permanen di bagian bawah -->
+                <div class="absolute bottom-0 left-0 right-0 bg-red-500 text-white px-4 py-2 text-lg rounded-t-lg">
+                    Celana
+                </div>
+            </div>
+            <!-- Kid's Category -->
+            <div class="relative group hover-zoom hover-shadow">
+                <img src="image/3.jpg" alt="Kid's" class="w-full h-full object-cover rounded-lg">
+                <!-- Gradient overlay for better text readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
+                <!-- Label permanen di bagian bawah -->
+                <div class="absolute bottom-0 left-0 right-0 bg-red-500 text-white px-4 py-2 text-lg rounded-t-lg">
+                    Aksesoris
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-3">Tentang agus</h3>
+                <p class="text-gray-400">Agus ga suka ya sama orang yang bebel ga bisa di omongin , agus cuman mau mereka jujur aja.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-3">Hubungin Agus</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Instagram</a></li>
+                    <li><a href="#" class="hover:text-white">Shopee</a></li>
+                    <li><a href="#" class="hover:text-white">Telegram</a></li>
+                    <li><a href="#" class="hover:text-white">Tiktok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-3">Masukan</h3>
+                <p class="text-gray-400 mb-4">Agus ga mau kayak gini , agus punya masa depan , umur agus masih muda , gimana nanti nasib agus kedepannya ?.</p>
+                <form>
+                    <input type="email" class="bg-gray-900 text-gray-300 py-2 px-4 rounded w-full" placeholder="Buly agus disini ">
+                    <button class="bg-red-500 text-white px-4 py-2 mt-3 rounded hover:bg-red-600 transition duration-300">Tombol Agus Kontol</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');  // Hide or Show menu
+        });
+    </script>
+
+</body>
+</html>
